@@ -12,6 +12,9 @@ namespace EnthusiasticMoose2
             MooseSays("Hi, I'm Randy the Moose!");
             MooseSays("I'm really excited to be here today!");
 
+            bool answer = MooseAsks("I'm a little nervous. Can you help me get over my fear?");
+            Console.WriteLine(answer);
+
             void MooseSays(string question)
 {
     Console.WriteLine($@"
@@ -42,6 +45,33 @@ namespace EnthusiasticMoose2
                       \ \'._  ` '_.'
                        `^^` `^^^`
     ");
+}
+
+    bool MooseAsks(string question)
+{
+    //displaying question and waiting for response
+    Console.Write($"{question} (Y/N): ");
+    //storing response in answer
+    string answer = Console.ReadLine();
+
+    //run the question until y or n is entered
+    // string answer = "";
+
+    while (answer != "y" && answer != "n")
+    {
+        // Console.Write($"{question} (Y/N): ");
+        answer = Console.ReadLine().ToLower();
+    }
+
+
+    if (answer == "y")
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
         }
     }
