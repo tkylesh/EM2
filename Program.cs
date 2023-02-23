@@ -12,8 +12,16 @@ namespace EnthusiasticMoose2
             MooseSays("Hi, I'm Randy the Moose!");
             MooseSays("I'm really excited to be here today!");
 
-            bool answer = MooseAsks("I'm a little nervous. Can you help me get over my fear?");
-            Console.WriteLine(answer);
+            bool isTrue = MooseAsks("Is Canada real?");
+if (isTrue)
+{
+    MooseSays("Really? It seems very unlikely.");
+}
+else
+{
+    MooseSays("I  K N E W  I T !!!");
+}
+
 
             void MooseSays(string question)
 {
